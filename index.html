@@ -41,6 +41,26 @@
         .zh-foot { color: #999; font-size: 0.83em; }
         .answer { color: #1a5276; font-weight: 600; background: #eaf2f8; padding: 1px 4px; border-radius: 3px; }
         .given { color: #888; font-style: italic; }
+        textarea.blank-input {
+            width: 100%;
+            border: 1px dashed #ccc;
+            padding: 12px;
+            color: #ccc;
+            font-style: italic;
+            font-family: inherit;
+            font-size: 0.93em;
+            line-height: 1.6;
+            resize: vertical;
+            min-height: 50px;
+            background: transparent;
+            overflow: hidden;
+        }
+        textarea.blank-input:focus {
+            border-color: #2980b9;
+            color: #333;
+            outline: none;
+            background: #fafcfe;
+        }
     </style>
 </head>
 <body>
@@ -48,6 +68,7 @@
         <div class="header-top">
             <div>
                 <h1>LAN4103_IT_Teaching of Funding Proposals <a href="https://beccatang-1710.github.io/LAN4103_DE_Teaching-of-Funding-Proposals/" target="_blank" style="display:inline-block; background:rgba(255,255,255,0.25); border:2px solid white; color:white; padding:2px 10px; border-radius:15px; text-decoration:none; font-size:0.55em; font-weight:700; vertical-align:middle; margin-left:6px; transition:all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.4)'" onmouseout="this.style.background='rgba(255,255,255,0.25)'">DE</a></h1>
+                <div style="font-size:0.85em; opacity:0.9; margin-top:2px;">Presented by Rebecca Tang</div>
                 <div class="zh-title" id="zhMainTitle">LAN4103_IT_资助提案教学</div>
             </div>
             <div style="display:flex; gap:8px; align-items:center;">
@@ -58,15 +79,18 @@
         <div class="tabs">
             <button class="tab-btn active" onclick="switchTab(0)">Sample Funding Proposal</button>
             <button class="tab-btn" onclick="switchTab(1)">Practice (Island Esports)</button>
-            <button class="tab-btn" onclick="switchTab(2)">Unit 3: Implementation Details</button>
-            <button class="tab-btn" onclick="switchTab(3)">Unit 2: Organisation Information</button>
-            <button class="tab-btn" onclick="switchTab(4)">Supplementary Notes for CA</button>
-            <button class="tab-btn" onclick="switchTab(5)">Unit 5: Justification & Supplementary Info</button>
+            <button class="tab-btn" onclick="switchTab(2)">Unit 2: Organisation Information</button>
+            <button class="tab-btn" onclick="switchTab(3)">Unit 3: Implementation Details</button>
+            <button class="tab-btn" onclick="switchTab(4)">Unit 4: Justification for Funding</button>
+            <button class="tab-btn" onclick="switchTab(5)">Unit 5: Supplementary Information</button>
+            <button class="tab-btn" onclick="switchTab(6)">Revision Package I (IT)</button>
+            <button class="tab-btn" onclick="switchTab(7)">CA Assessment Overview</button>
+            <button class="tab-btn" onclick="switchTab(8)">Supplementary Notes for CA</button>
         </div>
     </div>
 
     <div class="container">
-        <!-- ==================== TAB 1: SoftTech Solutions ==================== -->
+        <!-- ==================== TAB 0: Sample Funding Proposal ==================== -->
         <div class="tab-content active" id="tab0">
             <div class="card">
                 <h2>Part A: Organisation Details</h2>
@@ -157,7 +181,7 @@
             </div>
         </div>
 
-        <!-- ==================== TAB 2: Practice (Island Esports) ==================== -->
+        <!-- ==================== TAB 1: Practice (Island Esports) ==================== -->
         <div class="tab-content" id="tab1">
             <div class="card">
                 <h2>Practice (Island Esports)</h2>
@@ -193,8 +217,8 @@
 
                 <div class="project-section">
                     <h3>Organizational Information</h3>
-                    <p style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">____________________ in 2013, ____________________ a gaming association ____________________ nurturing esports talent. We also ____________________ to nurture positive gaming culture.</p>
-                    <div class="zh-text" id="t2zh1" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">____________________，是一个致力于培养电竞人才的电竞协会。我们亦举办各类电竞游戏及比赛，以培育正面的游戏文化。</div>
+                    <textarea class="blank-input" rows="3" placeholder="____________________ in 2013, ____________________ a gaming association ____________________ nurturing esports talent. We also ____________________ to nurture positive gaming culture."></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="____________________，是一个致力于培养电竞人才的电竞协会。我们亦举办各类电竞游戏及比赛，以培育正面的游戏文化。"></textarea>
                 </div>
 
                 <div class="project-section">
@@ -211,40 +235,33 @@
 
                 <div class="project-section">
                     <h3>Implementation</h3>
-                    <p style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">The project will be completed in ____________________ stages, each lasting ____________________ weeks.</p>
-                    <div class="zh-text" id="t2zh4a" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">项目将分______个阶段进行，每阶段为期______周。</div>
-                    <ul style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">
-                        <li>In stage 1, we ____________________ to determine ____________________.</li>
-                    </ul>
-                    <div class="zh-text" id="t2zh4b" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;"><ul><li>在第一阶段，我们______，以确定______。</li></ul></div>
-                    <ul style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">
-                        <li>In stage 2, we ____________________ and set up ____________________.</li>
-                    </ul>
-                    <div class="zh-text" id="t2zh4c" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;"><ul><li>在第二阶段，我们______，并设立______。</li></ul></div>
-                    <ul style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">
-                        <li>In the final stage, we ____________________ and host ____________________.</li>
-                    </ul>
-                    <div class="zh-text" id="t2zh4d" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;"><ul><li>在最后阶段，我们______，并举办______。</li></ul></div>
+                    <textarea class="blank-input" rows="3" placeholder="The project will be completed in ____________________ stages, each lasting ____________________ weeks."></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="In stage 1, we ____________________ to determine ____________________."></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="在第一阶段，我们______，以确定______。"></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="In stage 2, we ____________________ and set up ____________________."></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="在第二阶段，我们______，并设立______。"></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="In the final stage, we ____________________ and host ____________________."></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="在最后阶段，我们______，并举办______。"></textarea>
                 </div>
 
                 <div class="project-section">
                     <h3>Amount of Funding Requested</h3>
-                    <p style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">It is expected that a total of ____________________ will be required for the project. Please refer to the attached document for a detailed breakdown of the costs.</p>
-                    <div class="zh-text" id="t2zh5" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">项目预计所需资金总额为______。详情请参阅附件。</div>
+                    <textarea class="blank-input" rows="3" placeholder="It is expected that a total of ____________________ will be required for the project. Please refer to the attached document for a detailed breakdown of the costs."></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="项目预计所需资金总额为______。详情请参阅附件。"></textarea>
                 </div>
 
                 <div class="project-section">
                     <h3>Justification for Funding</h3>
-                    <p style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">The skills and dedication of the Hong Kong gamers demonstrated during the tournament will ____________________ public appreciation of esports as a valuable industry. Additionally, the tournament is an opportunity for the gamers to ____________________ their competitiveness. Further, the tournament and Hong Kong Cyberport ____________________ the same mission and values, which are to attract more people to pay attention to esports development.</p>
-                    <div class="zh-text" id="t2zh6" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">比赛中所展现的香港电竞选手的技能及投入精神，将______公众欣赏电竞作为一个有价值的行业。此外，比赛为选手提供______竞争力的机会。再者，比赛与香港数码港______相同的使命及价值观，旨在吸引更多人关注电竞发展。</div>
+                    <textarea class="blank-input" rows="4" placeholder="The skills and dedication of the Hong Kong gamers demonstrated during the tournament will ____________________ public appreciation of esports as a valuable industry. Additionally, the tournament is an opportunity for the gamers to ____________________ their competitiveness. Further, the tournament and Hong Kong Cyberport ____________________ the same mission and values, which are to attract more people to pay attention to esports development."></textarea>
+                    <textarea class="blank-input" rows="4" placeholder="比赛中所展现的香港电竞选手的技能及投入精神，将______公众欣赏电竞作为一个有价值的行业。此外，比赛为选手提供______竞争力的机会。再者，比赛与香港数码港______相同的使命及价值观，旨在吸引更多人关注电竞发展。"></textarea>
                 </div>
 
                 <div class="project-section">
                     <h3>Supplementary Information</h3>
-                    <p style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">We recognise that there might be technical issues due to, for example, server lag during the tournament. However, we will spare no effort in ____________________ and conduct ____________________ so that ____________________.</p>
-                    <div class="zh-text" id="t2zh7" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">我们承认比赛期间可能会出现技术问题，例如服务器延迟。然而，我们将不遗余力地______，并进行______，以确保______。</div>
-                    <p style="margin-top:8px; border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">____________________.</p>
-                    <div class="zh-text" id="t2zh8" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">______。</div>
+                    <textarea class="blank-input" rows="3" placeholder="We recognise that there might be technical issues due to, for example, server lag during the tournament. However, we will spare no effort in ____________________ and conduct ____________________ so that ____________________."></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="我们承认比赛期间可能会出现技术问题，例如服务器延迟。然而，我们将不遗余力地______，并进行______，以确保______。"></textarea>
+                    <textarea class="blank-input" rows="2" placeholder="____________________."></textarea>
+                    <textarea class="blank-input" rows="2" placeholder="______。"></textarea>
                 </div>
             </div>
 
@@ -256,8 +273,87 @@
             </div>
         </div>
 
-        <!-- ==================== TAB 3: Unit 3: Implementation Details ==================== -->
+        <!-- ==================== TAB 2: Unit 2: Organisation Information ==================== -->
         <div class="tab-content" id="tab2">
+            <div class="card">
+                <h2>LAN4103 — Unit 2: Organisation Information</h2>
+                <div class="zh-label">LAN4103 — 单元二：机构资料</div>
+            </div>
+
+            <div class="card">
+                <h2>Task 3b — Organisation Background Information</h2>
+                <div class="zh-label">任务 3b — 机构背景资料</div>
+                <p>Describe the background information of the organisations using past participle or non-defining relative clauses.</p>
+                <div class="zh-text">请使用过去分词或非限定性关系子句描述以下机构的背景资料。</div>
+
+                <div class="project-section">
+                    <h3>1. SecureNet Alliance</h3>
+                    <dl class="info-grid">
+                        <dt>Start year:</dt><dd>2020</dd>
+                        <dt>Business nature:</dt><dd>Technology company</dd>
+                        <dt>Our target:</dt><dd>Corporations, Government agencies</dd>
+                        <dt>Our services:</dt><dd>Cybersecurity services; Employee training programmes — respond to cyberattacks effectively</dd>
+                    </dl>
+                    <textarea class="blank-input" rows="3" placeholder="____________________ in 2020, ____________________ a technology company focusing on providing cybersecurity services to corporations and government agencies. We also ____________________ to help clients respond to cyberattacks effectively."></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="成立于2020年，______是一家科技公司，专注于为企业及政府机构提供网络安全服务。我们亦______，协助客户有效应对网络攻击。"></textarea>
+                </div>
+
+                <div class="project-section">
+                    <h3>2. Hong Kong Software Engineering Association</h3>
+                    <dl class="info-grid">
+                        <dt>Launch year:</dt><dd>2013</dd>
+                        <dt>Nature of business:</dt><dd>Non-profit organisation</dd>
+                        <dt>Service target:</dt><dd>Software engineers in Hong Kong</dd>
+                        <dt>Services:</dt><dd>Certification courses; Organise networking events — foster collaboration &amp; innovation within industry</dd>
+                    </dl>
+                    <textarea class="blank-input" rows="3" placeholder="____________________ in 2013, ____________________ a non-profit organisation specialising in providing certification courses for software engineers in Hong Kong. We also ____________________, which foster collaboration and innovation within the industry."></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="成立于2013年，______是一间非营利组织，专门为香港软件工程师提供认证课程。我们亦______，促进业内的协作与创新。"></textarea>
+                </div>
+
+                <div class="project-section">
+                    <h3>3. DigitalBridge HK</h3>
+                    <dl class="info-grid">
+                        <dt>When formed:</dt><dd>2022</dd>
+                        <dt>Who we are:</dt><dd>Non-governmental body</dd>
+                        <dt>Who we serve:</dt><dd>Underprivileged students</dd>
+                        <dt>What we support:</dt><dd>Free IT courses; Laptop lending service — ensure students have access to digital devices for learning</dd>
+                    </dl>
+                    <textarea class="blank-input" rows="3" placeholder="____________________ in 2022, ____________________ a non-governmental body dedicated to supporting underprivileged students. We also ____________________ to ensure students have access to digital devices for learning."></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="成立于2022年，______是一个非政府机构，致力于支援弱势学生。我们亦______，确保学生有数码设备可用於学习。"></textarea>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Task 4c — Project Backgrounds Using Prepositional Phrases</h2>
+                <div class="zh-label">任务 4c — 使用介词短语描述项目背景</div>
+                <p>Describe the project backgrounds below using prepositional phrases to set the context.</p>
+                <div class="zh-text">请使用介词短语描述以下项目背景。</div>
+
+                <div class="project-section">
+                    <h3>1. Mobile Wallet App</h3>
+                    <p><strong>Industry trend:</strong> The adoption of mobile payment methods is growing rapidly in Hong Kong.</p>
+                    <textarea class="blank-input" rows="3" placeholder="With ____________________, we would like to ____________________."></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="随着______，我们计划______。"></textarea>
+                </div>
+
+                <div class="project-section">
+                    <h3>2. Network Infrastructure Upgrade</h3>
+                    <p><strong>Problem:</strong> The disruptions of Internet services during peak hours are becoming more frequent.</p>
+                    <textarea class="blank-input" rows="3" placeholder="In light of ____________________, we are planning to ____________________."></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="鉴于______，我们计划______。"></textarea>
+                </div>
+
+                <div class="project-section">
+                    <h3>3. AI System Upgrade</h3>
+                    <p><strong>Phenomenon:</strong> Big data analytics is transforming business operations.</p>
+                    <textarea class="blank-input" rows="3" placeholder="In response to ____________________, we would like to ____________________."></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="为应对______，我们计划______。"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== TAB 3: Unit 3: Implementation Details ==================== -->
+        <div class="tab-content" id="tab3">
             <div class="card">
                 <h2>LAN4103 — Unit 3: Implementation Details</h2>
                 <div class="zh-label">LAN4103 — 单元三：执行计划详情</div>
@@ -291,8 +387,8 @@
                         <li>Phase IV: Analysing feedback; identifying new topics for future workshops</li>
                     </ul>
                     <div class="zh-text"><ul><li>第四阶段：分析反馈；为未来工作坊发掘新主题</li></ul></div>
-                    <p style="margin-top:10px; border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">The project will be executed in four phases, ____________________.</p>
-                    <div class="zh-text" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">项目将分四个阶段进行，______。</div>
+                    <textarea class="blank-input" rows="4" placeholder="The project will be executed in four phases, ____________________."></textarea>
+                    <textarea class="blank-input" rows="4" placeholder="项目将分四个阶段进行，______。"></textarea>
                 </div>
             </div>
 
@@ -313,8 +409,8 @@
                         <tr><td style="padding:6px; border:1px solid #ccc;">4. Deployment and user support</td><td style="text-align:right; padding:6px; border:1px solid #ccc;">$130,000</td></tr>
                         <tr style="font-weight:bold;"><td style="padding:6px; border:1px solid #ccc;">Total:</td><td style="text-align:right; padding:6px; border:1px solid #ccc;">$500,000</td></tr>
                     </table>
-                    <p style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">____________________.</p>
-                    <div class="zh-text" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">______。</div>
+                    <textarea class="blank-input" rows="3" placeholder="____________________."></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="______。"></textarea>
                 </div>
 
                 <div class="project-section">
@@ -327,302 +423,393 @@
                         <tr><td style="padding:6px; border:1px solid #ccc;">15. Maintenance and support</td><td style="text-align:right; padding:6px; border:1px solid #ccc;">$50,000</td></tr>
                         <tr style="font-weight:bold;"><td style="padding:6px; border:1px solid #ccc;">Total:</td><td style="text-align:right; padding:6px; border:1px solid #ccc;">$600,000</td></tr>
                     </table>
-                    <p style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">____________________.</p>
-                    <div class="zh-text" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">______。</div>
-                </div>
-            </div>
-
-            <div class="card">
-                <h2>Follow the 4 Steps to Write Your 25% CA</h2>
-                <div class="zh-label">按照以下四个步骤撰写25%持续评估</div>
-            </div>
-
-            <div class="card">
-                <h2>Step 1: Writing Organisation Information (Unit 2)</h2>
-                <div class="zh-label" id="t3zhS1">第一步：撰写机构资料（单元二）</div>
-                <p>For writing Organisation information, identify key components on the homepage and use the following grammatical structures:</p>
-                <div class="zh-text" id="t3zhS1a">撰写机构资料时，请从主页中识别关键信息，并运用以下语法结构：</div>
-                <ul>
-                    <li><strong>Structure 1:</strong> [past participle, "-ed"] + in + Establishment/Founding/Formation year</li>
-                </ul>
-                <div class="zh-text" id="t3zhS1b1"><ul><li><strong>结构一：</strong>[过去分词] + in + 成立/创办年份</li></ul></div>
-                <ul>
-                    <li><strong>Structure 2:</strong> Organization name + is a + [business nature]</li>
-                </ul>
-                <div class="zh-text" id="t3zhS1b2"><ul><li><strong>结构二：</strong>机构名称 + is a + [业务性质]</li></ul></div>
-                <ul>
-                    <li><strong>Structure 3:</strong> specialising in / dedicated to / committed to / devoted to / focusing on + [action / area]</li>
-                </ul>
-                <div class="zh-text" id="t3zhS1b3"><ul><li><strong>结构三：</strong>specialising in / dedicated to / committed to / devoted to / focusing on + [行动/领域]</li></ul></div>
-                <ul>
-                    <li><strong>Structure 4:</strong> Additionally, / Also, + we organize / run / conduct / provide / offer + organization's mission / services / work</li>
-                </ul>
-                <div class="zh-text" id="t3zhS1b4"><ul><li><strong>结构四：</strong>Additionally / Also + we organize / run / conduct / provide / offer + 机构使命/服务</li></ul></div>
-                <ul>
-                    <li><strong>Structure 5:</strong> [to + verb] + purpose of the mission / services / work</li>
-                </ul>
-                <div class="zh-text" id="t3zhS1b5"><ul><li><strong>结构五：</strong>[to + 动词] + 使命/服务的目的</li></ul></div>
-
-                <h3 style="margin-top:14px; color:#1a5276;">Examples / 范例</h3>
-                <div class="project-section">
-                    <p><strong>Example 1 (InnoDesign):</strong> Formed in 2001, InnoDesign is a product design consultancy devoted to offering customised product prototyping services to local and international manufacturers.</p>
-                    <div class="zh-text" id="t3zhE1a"><strong>范例一（InnoDesign）：</strong>InnoDesign 成立于2001年，是一间产品设计顾问公司，致力于为本地及国际制造商提供定制产品原型服务。</div>
-                    <p>Also, we host community workshops to engage participants in hands-on product design activities.</p>
-                    <div class="zh-text" id="t3zhE1b">此外，我们举办社区工作坊，让参与者亲身参与产品设计活动。</div>
-                </div>
-                <div class="project-section">
-                    <p><strong>Example 2 (StyleScope):</strong> Started in 2020, StyleScope Hong Kong is a fashion media company focusing on publishing fashion and beauty magazines for style enthusiasts.</p>
-                    <div class="zh-text" id="t3zhE2a"><strong>范例二（StyleScope）：</strong>StyleScope Hong Kong 成立于2020年，是一间时尚媒体公司，专注于为时尚爱好者出版时装及美容杂志。</div>
-                    <p>Additionally, we run reader engagement campaigns to invite fashion ideas or styling tips from readers.</p>
-                    <div class="zh-text" id="t3zhE2b">此外，我们举办读者互动活动，邀请读者分享时尚创意及穿搭贴士。</div>
-                </div>
-                <div class="project-section">
-                    <p><strong>Example 3 (Island Esports):</strong> Established in 2013, Island Esports is a gaming association dedicated to nurturing esports talent in Hong Kong.</p>
-                    <div class="zh-text" id="t3zhE3a"><strong>范例三（Island Esports）：</strong>Island Esports 成立于2013年，是一个致力于培养香港电竞人才的电竞协会。</div>
-                    <p>Also, we offer a range of esport games and competitions to nurture positive gaming culture.</p>
-                    <div class="zh-text" id="t3zhE3b">此外，我们举办各类电竞游戏及比赛，以培育正面的游戏文化。</div>
-                </div>
-            </div>
-
-            <div class="card">
-                <h2>Step 2: Writing Project Details (Unit 3)</h2>
-                <div class="zh-label" id="t3zhS2">第二步：撰写项目详情（单元三）</div>
-                <p>For writing Project details (Implementation + Amount of funding requested), identify duration and action of each phase on Notes of meeting.</p>
-                <div class="zh-text" id="t3zhS2a">撰写项目详情（执行计划 + 申请资助金额）时，请从会议记录中识别各阶段的时间及行动。</div>
-
-                <h3 style="margin-top:12px; color:#2980b9;">a. Implementation Formula / 执行计划公式</h3>
-                <ul>
-                    <li>The project will be completed in three stages/phases, each lasting XXX months/weeks.</li>
-                </ul>
-                <div class="zh-text" id="t3zhS2b1"><ul><li>项目将分三个阶段进行，每阶段为期XXX个月/周。</li></ul></div>
-                <ul>
-                    <li>In phase 1, we will [verb]..., in phase 2, we will [verb]...</li>
-                </ul>
-                <div class="zh-text" id="t3zhS2b2"><ul><li>在第一阶段，我们将……；在第二阶段，我们将……</li></ul></div>
-                <ul>
-                    <li>In phase 3, / In the final phase, ...</li>
-                </ul>
-                <div class="zh-text" id="t3zhS2b3"><ul><li>在第三阶段 / 在最后阶段，……</li></ul></div>
-
-                <h3 style="margin-top:12px; color:#2980b9;">b. Amount of Funding Requested Formula / 申请资助金额公式</h3>
-                <ul>
-                    <li>It is estimated that a total of $xxxxx will be required for the project. For details of the breakdown, please refer to the attachment.</li>
-                </ul>
-                <div class="zh-text" id="t3zhS2c1"><ul><li>项目预计所需资金总额为$xxxxx。详情请参阅附件。</li></ul></div>
-                <ul>
-                    <li>(Alternative) The project is estimated to cost around $xxxxx. The details of the breakdown are attached for your information.</li>
-                </ul>
-                <div class="zh-text" id="t3zhS2c2"><ul><li>（替代写法）项目预计成本约为$xxxxx。费用明细已附上供参考。</li></ul></div>
-
-                <h3 style="margin-top:14px; color:#1a5276;">Examples / 范例</h3>
-                <div class="project-section">
-                    <p><strong>Example 1 — Film / Drama Project:</strong></p>
-                    <p><strong>a. Implementation:</strong> The project will be completed in three phases, each lasting two months. In phase 1, we will finalise the screenplay and cast suitable actors.</p>
-                    <div class="zh-text" id="t3zhE4a"><strong>范例一 — 电影/戏剧项目：</strong></div>
-                    <div class="zh-text" id="t3zhE4b"><strong>a. 执行计划：</strong>项目将分三个阶段进行，每阶段为期两个月。在第一阶段，我们将敲定剧本并挑选合适的演员。</div>
-                    <p>In phase 2, necessary filming permits will be obtained before scheduling rehearsals. Filming will also be conducted to capture the scripted scenes.</p>
-                    <div class="zh-text" id="t3zhE4c">在第二阶段，将先取得所需的拍摄许可证，再安排排练，并进行拍摄以捕捉剧本中的场景。</div>
-                    <p>In the final phase, we will edit the footage and test the submission entry on multiple devices to ensure technical compatibility.</p>
-                    <div class="zh-text" id="t3zhE4d">在最后阶段，我们将剪辑影片，并在多个设备上测试提交条目，以确保技术兼容性。</div>
-                    <p><strong>b. Amount of funding requested:</strong> It is estimated that a total of $1,000,000 will be required for the project. For details of the breakdown, please refer to the attachment.</p>
-                    <div class="zh-text" id="t3zhE4e"><strong>b. 申请资助金额：</strong>项目预计所需资金总额为1,000,000港元。详情请参阅附件。</div>
-                </div>
-                <div class="project-section">
-                    <p><strong>Example 2 — Neon Art Exhibition:</strong></p>
-                    <p><strong>a. Implementation:</strong> The project will be executed in three stages, each spanning three weeks. In stage 1, we will send invitations to local neon artists and co-create artworks with them.</p>
-                    <div class="zh-text" id="t3zhE5a"><strong>范例二 — 霓虹灯艺术展览：</strong></div>
-                    <div class="zh-text" id="t3zhE5b"><strong>a. 执行计划：</strong>项目将分三个阶段进行，每阶段为期三周。在第一阶段，我们将向本地霓虹灯艺术家发出邀请，并与他们共同创作艺术品。</div>
-                    <p>In stage 2, the exhibition will be installed at a public venue. Interactive workshops will also be incorporated.</p>
-                    <div class="zh-text" id="t3zhE5c">在第二阶段，展览将在公共场所设置，并加入互动工作坊。</div>
-                    <p>In the final stage, we will conduct random interviews with visitors and collect their feedback to evaluate the project's impact for future development.</p>
-                    <div class="zh-text" id="t3zhE5d">在最后阶段，我们将随机访问参观者并收集反馈，以评估项目对未来发展的影响。</div>
-                    <p><strong>b. Amount of funding requested:</strong> The project is estimated to cost around $400,000. The details of the breakdown are attached for your information.</p>
-                    <div class="zh-text" id="t3zhE5e"><strong>b. 申请资助金额：</strong>项目预计成本约为400,000港元。费用明细已附上供参考。</div>
-                </div>
-            </div>
-
-            <div class="card">
-                <h2>Step 3: Writing Justification for Funding (Unit 4)</h2>
-                <div class="zh-label" id="t3zhS3">第三步：撰写资助理由（单元四）</div>
-                <p>For writing Justification, identify 3 benefits on your handwritten notes. Use the following vocabulary and grammatical structures:</p>
-                <div class="zh-text" id="t3zhS3a">撰写资助理由时，请从手写笔记中识别三项益处，并运用以下词汇和语法结构：</div>
-                <ul>
-                    <li><strong>Benefit 1:</strong> The project will + provide / offer / feature / give + [Benefit 1]</li>
-                </ul>
-                <div class="zh-text" id="t3zhS3b1"><ul><li><strong>益处一：</strong>项目将 + 提供/展示/带来 + [益处一]</li></ul></div>
-                <ul>
-                    <li><strong>Elaboration:</strong> verb+ing (e.g. strengthening / encouraging) + [result / elaboration]</li>
-                </ul>
-                <div class="zh-text" id="t3zhS3b2"><ul><li><strong>阐述：</strong>动词+ing（如加强/促进）+ [结果/阐述]</li></ul></div>
-                <ul>
-                    <li><strong>Benefit 2:</strong> Additionally, / Moreover, / In addition, it / the project will + [Benefit 2]</li>
-                </ul>
-                <div class="zh-text" id="t3zhS3b3"><ul><li><strong>益处二：</strong>此外 / 而且 / 与此同时，该项目将 + [益处二]</li></ul></div>
-                <ul>
-                    <li><strong>Elaboration:</strong> which + [result / elaboration]</li>
-                </ul>
-                <div class="zh-text" id="t3zhS3b4"><ul><li><strong>阐述：</strong>which + [结果/阐述]</li></ul></div>
-                <ul>
-                    <li><strong>Alignment with Funder:</strong> Furthermore, / Also, this project's aim closely aligns with / is in line with the mission and values of [funder].</li>
-                </ul>
-                <div class="zh-text" id="t3zhS3b5"><ul><li><strong>与资助方的契合：</strong>再者，本项目的目标与[资助方]的使命及价值观高度契合。</li></ul></div>
-
-                <h3 style="margin-top:14px; color:#1a5276;">Examples / 范例</h3>
-                <div class="project-section">
-                    <p><strong>Example 1 (Creative Industry):</strong> The competition will provide a platform for our emerging creators to showcase their work, strengthening the industry's creative pipeline.</p>
-                    <div class="zh-text" id="t3zhE6a"><strong>范例一（创意产业）：</strong>比赛将为新晋创作者提供展示作品的平台，加强业界的创意储备。</div>
-                    <p>In addition, the funding will enable us to secure essential production resources, which helps to ensure high-quality post-production work.</p>
-                    <div class="zh-text" id="t3zhE6b">此外，资助将使我们能够获取必要的制作资源，有助于确保高质量的后期制作工作。</div>
-                    <p>Furthermore, the aim of the project closely aligns with the mission of the Cultural and Creative Industries Development Agency. It will contribute greatly to the sustainable growth of Hong Kong's cultural and creative industries.</p>
-                    <div class="zh-text" id="t3zhE6c">再者，本项目的目标与创意香港的使命高度契合，将大大促进香港文化创意产业的可持续发展。</div>
-                </div>
-                <div class="project-section">
-                    <p><strong>Example 2 (Neon Art & Heritage):</strong> The neon exhibition will highlight the craftsmanship and cultural significance of neon art, encouraging the public to rediscover this unique visual heritage.</p>
-                    <div class="zh-text" id="t3zhE7a"><strong>范例二（霓虹灯艺术与文化遗产）：</strong>霓虹灯展览将突出霓虹灯艺术的工艺及文化意义，鼓励公众重新认识这一独特的视觉遗产。</div>
-                    <p>Local artists will also have a platform to experiment with light-based media, which will foster creative exchange.</p>
-                    <div class="zh-text" id="t3zhE7b">本地艺术家亦将获得一个试验光媒体的平台，促进创意交流。</div>
-                    <p>Moreover, the project's aim is in line with the mission and values of the CreateSmart Initiative, resulting in promoting design appreciation and cultural preservation in the community.</p>
-                    <div class="zh-text" id="t3zhE7c">此外，本项目的目标与「创意智优计划」的使命及价值观一致，有助促进社区对设计的欣赏及文化保育。</div>
-                </div>
-            </div>
-
-            <div class="card">
-                <h2>Step 4: Writing Supplementary Information (Unit 5)</h2>
-                <div class="zh-label" id="t3zhS4">第四步：撰写补充资料（单元五）</div>
-                <p>For writing Supplementary information, identify the possible concern and solution and a concluding remark on your handwritten notes.</p>
-                <div class="zh-text" id="t3zhS4a">撰写补充资料时，请从手写笔记中识别可能的关注事项、解决方案及结语。</div>
-                <ul>
-                    <li><strong>1. Acknowledging Concern:</strong> We are aware that / We acknowledge / We understand that there might be concerns about ... [concern]</li>
-                </ul>
-                <div class="zh-text" id="t3zhS4b1"><ul><li><strong>1. 承认关注事项：</strong>我们明白 / 我们理解可能会有……的顾虑</li></ul></div>
-                <ul>
-                    <li><strong>2. Proposing Solution:</strong> However, we will ensure that... / However, please rest assured that we will... [solution]</li>
-                </ul>
-                <div class="zh-text" id="t3zhS4b2"><ul><li><strong>2. 提出解决方案：</strong>然而，我们将确保…… / 请放心，我们将……</li></ul></div>
-                <ul>
-                    <li><strong>3. Concluding Remark:</strong> We are confident that the project / [verb-ing phrase], which [project aim], will [summary of benefits / positive outcome].</li>
-                </ul>
-                <div class="zh-text" id="t3zhS4b3"><ul><li><strong>3. 结语：</strong>我们坚信，该项目 / [动词+ing短语]，[项目目标]，将[益处/正面成果的总结]。</li></ul></div>
-
-                <h3 style="margin-top:14px; color:#1a5276;">Examples / 范例</h3>
-                <div class="project-section">
-                    <p><strong>Example 1 — Esports Tournament (Technical Server Lag):</strong></p>
-                    <p>We are aware that there might be concerns about technical issues, such as server lag during the tournament. However, please rest assured that we will secure high-performance servers and conduct pre-event stress tests so that a smooth experience for all participants will be guaranteed.</p>
-                    <div class="zh-text" id="t3zhE8a"><strong>范例一 — 电竞比赛（服务器延迟技术问题）：</strong></div>
-                    <div class="zh-text" id="t3zhE8b">我们明白可能会有技术问题的顾虑，例如比赛期间的服务器延迟。请放心，我们将确保使用高性能服务器，并在活动前进行压力测试，以保证所有参与者享有流畅的体验。</div>
-                    <p>We are confident that organising the esports tournament, which showcases the outstanding performance of local gamers, will foster a positive perception of competitive gaming among the public, gaining more support from society.</p>
-                    <div class="zh-text" id="t3zhE8c">我们坚信，举办是次电竞比赛，展示本地电竞选手的出色表现，将促进公众对竞技游戏的正面看法，赢得社会更多支持。</div>
-                </div>
-                <div class="project-section">
-                    <p><strong>Example 2 — EV Charging Station Network (Equipment Safety):</strong></p>
-                    <p>We understand that there might be concerns about the safety of the charging stations. However, we will ensure regular check-ups and maintenance of the charging equipment so that the risk of malfunctions can be minimized.</p>
-                    <div class="zh-text" id="t3zhE9a"><strong>范例二 — 电动车充电站网络（设备安全）：</strong></div>
-                    <div class="zh-text" id="t3zhE9b">我们理解可能会对充电站的安全性有所顾虑。然而，我们将确保定期检查及保养充电设备，以尽量减低故障风险。</div>
-                    <p>We are confident that installing the EV charging station network, which promotes sustainable transportation and a greener future, will have a significant and far-reaching impact on environmental conservation, promoting the adoption of EVs in the community.</p>
-                    <div class="zh-text" id="t3zhE9c">我们坚信，安装电动车充电网络，推动可持续交通及更绿色的未来，将对环保产生深远影响，促进社区采用电动车。</div>
-                </div>
-                <div class="project-section">
-                    <p><strong>Example 3 — Neon Installation Exhibition (Electrical Safety):</strong></p>
-                    <p>We acknowledge that there might be concerns about the safety of neon installations. However, we are committed to ensuring that all artworks comply with electrical safety standards and undergo professional inspection before being displayed in order to minimise risks.</p>
-                    <div class="zh-text" id="t3zhE10a"><strong>范例三 — 霓虹灯装置展览（电力安全）：</strong></div>
-                    <div class="zh-text" id="t3zhE10b">我们承认可能会对霓虹灯装置的安全性有所顾虑。然而，我们致力于确保所有艺术品符合电力安全标准，并在展出前进行专业检查，以尽量减低风险。</div>
-                    <p>We are confident that the neon exhibition, which supports local creative talent, will generate meaningful cultural impact and inspire interest in preserving the city's design legacy.</p>
-                    <div class="zh-text" id="t3zhE10c">我们坚信，支持本地创意人才的霓虹灯展览，将产生有意义的文化影响，并激发人们保存城市设计遗产的兴趣。</div>
+                    <textarea class="blank-input" rows="3" placeholder="____________________."></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="______。"></textarea>
                 </div>
             </div>
         </div>
 
-        <!-- ==================== TAB 4: Unit 2: Organisation Information ==================== -->
-        <div class="tab-content" id="tab3">
-            <div class="card">
-                <h2>LAN4103 — Unit 2: Organisation Information</h2>
-                <div class="zh-label">LAN4103 — 单元二：机构资料</div>
-            </div>
-
-            <div class="card">
-                <h2>Task 3b — Organisation Background Information</h2>
-                <div class="zh-label">任务 3b — 机构背景资料</div>
-                <p>Describe the background information of the organisations using past participle or non-defining relative clauses.</p>
-                <div class="zh-text">请使用过去分词或非限定性关系子句描述以下机构的背景资料。</div>
-
-                <div class="project-section">
-                    <h3>1. SecureNet Alliance</h3>
-                    <dl class="info-grid">
-                        <dt>Start year:</dt><dd>2020</dd>
-                        <dt>Business nature:</dt><dd>Technology company</dd>
-                        <dt>Our target:</dt><dd>Corporations, Government agencies</dd>
-                        <dt>Our services:</dt><dd>Cybersecurity services; Employee training programmes — respond to cyberattacks effectively</dd>
-                    </dl>
-                    <p style="margin-top:8px; border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">____________________ in 2020, ____________________ a technology company focusing on providing cybersecurity services to corporations and government agencies. We also ____________________ to help clients respond to cyberattacks effectively.</p>
-                    <div class="zh-text" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">成立于2020年，______是一家科技公司，专注于为企业及政府机构提供网络安全服务。我们亦______，协助客户有效应对网络攻击。</div>
-                </div>
-
-                <div class="project-section">
-                    <h3>2. Hong Kong Software Engineering Association</h3>
-                    <dl class="info-grid">
-                        <dt>Launch year:</dt><dd>2013</dd>
-                        <dt>Nature of business:</dt><dd>Non-profit organisation</dd>
-                        <dt>Service target:</dt><dd>Software engineers in Hong Kong</dd>
-                        <dt>Services:</dt><dd>Certification courses; Organise networking events — foster collaboration &amp; innovation within industry</dd>
-                    </dl>
-                    <p style="margin-top:8px; border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">____________________ in 2013, ____________________ a non-profit organisation specialising in providing certification courses for software engineers in Hong Kong. We also ____________________, which foster collaboration and innovation within the industry.</p>
-                    <div class="zh-text" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">成立于2013年，______是一间非营利组织，专门为香港软件工程师提供认证课程。我们亦______，促进业内的协作与创新。</div>
-                </div>
-
-                <div class="project-section">
-                    <h3>3. DigitalBridge HK</h3>
-                    <dl class="info-grid">
-                        <dt>When formed:</dt><dd>2022</dd>
-                        <dt>Who we are:</dt><dd>Non-governmental body</dd>
-                        <dt>Who we serve:</dt><dd>Underprivileged students</dd>
-                        <dt>What we support:</dt><dd>Free IT courses; Laptop lending service — ensure students have access to digital devices for learning</dd>
-                    </dl>
-                    <p style="margin-top:8px; border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">____________________ in 2022, ____________________ a non-governmental body dedicated to supporting underprivileged students. We also ____________________ to ensure students have access to digital devices for learning.</p>
-                    <div class="zh-text" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">成立于2022年，______是一个非政府机构，致力于支援弱势学生。我们亦______，确保学生有数码设备可用於学习。</div>
-                </div>
-            </div>
-
-            <div class="card">
-                <h2>Task 4c — Project Backgrounds Using Prepositional Phrases</h2>
-                <div class="zh-label">任务 4c — 使用介词短语描述项目背景</div>
-                <p>Describe the project backgrounds below using prepositional phrases to set the context.</p>
-                <div class="zh-text">请使用介词短语描述以下项目背景。</div>
-
-                <div class="project-section">
-                    <h3>1. Mobile Wallet App</h3>
-                    <p><strong>Industry trend:</strong> The adoption of mobile payment methods is growing rapidly in Hong Kong.</p>
-                    <p style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">With ____________________, we would like to ____________________.</p>
-                    <div class="zh-text" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">随着______，我们计划______。</div>
-                </div>
-
-                <div class="project-section">
-                    <h3>2. Network Infrastructure Upgrade</h3>
-                    <p><strong>Problem:</strong> The disruptions of Internet services during peak hours are becoming more frequent.</p>
-                    <p style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">In light of ____________________, we are planning to ____________________.</p>
-                    <div class="zh-text" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">鉴于______，我们计划______。</div>
-                </div>
-
-                <div class="project-section">
-                    <h3>3. AI System Upgrade</h3>
-                    <p><strong>Phenomenon:</strong> Big data analytics is transforming business operations.</p>
-                    <p style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">In response to ____________________, we would like to ____________________.</p>
-                    <div class="zh-text" style="border:1px dashed #ccc; padding:12px; color:#ccc; font-style:italic;">为应对______，我们计划______。</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ==================== TAB 5: Supplementary Notes for CA ==================== -->
+        <!-- ==================== TAB 4: Unit 4: Justification for Funding ==================== -->
         <div class="tab-content" id="tab4">
             <div class="card">
+                <h2>Unit 4: Justification for Funding</h2>
+                <div class="zh-label">单元四：资助理由</div>
+            </div>
+
+            <div class="card">
+                <h2>Task 2b — Understanding Funding Body Priorities</h2>
+                <div class="zh-label">任务 2b — 了解资助方的优先事项</div>
+                <p>To strengthen your justification and make it more persuasive, you should explain how the project aligns with the funding body's mission or objectives. Funders are more likely to invest in projects that directly match their goals.</p>
+                <div class="zh-text">为加强你的资助理由并使其更具说服力，你应说明项目如何与资助方的使命或目标保持一致。资助方更有可能投资与其目标直接匹配的项目。</div>
+
+                <div class="project-section">
+                    <table style="width:100%; border-collapse:collapse; margin:8px 0; font-size:0.9em;">
+                        <tr style="background:#eaf2f8;">
+                            <th style="text-align:left; padding:8px; border:1px solid #ccc;">Government</th>
+                            <th style="text-align:left; padding:8px; border:1px solid #ccc;">Company Management</th>
+                            <th style="text-align:left; padding:8px; border:1px solid #ccc;">Non-Governmental Org (NGO)</th>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px; border:1px solid #ccc;">
+                                <ul style="margin:0; padding-left:18px;">
+                                    <li>Public welfare &amp; societal development</li>
+                                    <li>Economic growth &amp; job creation</li>
+                                    <li>Infrastructure improvement</li>
+                                    <li>Environmental sustainability</li>
+                                </ul>
+                            </td>
+                            <td style="padding:8px; border:1px solid #ccc;">
+                                <ul style="margin:0; padding-left:18px;">
+                                    <li>Cost-saving innovation</li>
+                                    <li>Maximising profit &amp; shareholder value</li>
+                                    <li>Internal strategic goals</li>
+                                    <li>Market expansion</li>
+                                </ul>
+                            </td>
+                            <td style="padding:8px; border:1px solid #ccc;">
+                                <ul style="margin:0; padding-left:18px;">
+                                    <li>Cultural preservation &amp; support</li>
+                                    <li>Health &amp; well-being development</li>
+                                    <li>Support to local community</li>
+                                    <li>Education &amp; skills development</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="zh-text"><strong>政府：</strong>公共福利与社会发展、经济增长与就业创造、基础设施改善、环境可持续性 | <strong>公司管理层：</strong>节约成本的创新、最大化利润与股东价值、内部战略目标、市场扩张 | <strong>非政府组织：</strong>文化保育与支持、健康与发展、支援本地社区、教育与技能发展</div>
+                </div>
+
+                <div class="project-section">
+                    <h3>Formula for Aligning Project Aim with Funding Bodies</h3>
+                    <p>The aim of the project [Verb Phrase] the [Target Noun] of [Funding Body], and it would [Impact Result].</p>
+                    <ul>
+                        <li><strong>Verb Phrases:</strong> closely aligns with | well echoes | clearly reflects | perfectly matches | strongly supports | is in line with</li>
+                        <li><strong>Target Nouns:</strong> mission | vision | values | goals | objectives</li>
+                    </ul>
+                    <div class="zh-text"><strong>项目目标与资助方匹配的公式：</strong>本项目的目标[动词短语][资助方]的[目标名词]，并将[影响结果]。<br><strong>动词短语：</strong>紧密契合 | 呼应 | 清晰反映 | 完美匹配 | 强力支持 | 与……一致 | <strong>目标名词：</strong>使命 | 愿景 | 价值观 | 目标 | 宗旨</div>
+                </div>
+
+                <div class="project-section">
+                    <p><strong>Vocabulary:</strong> <em>bureau</em> (n.) — a government department; <em>STEM</em> (n.) — Science, Technology, Engineering, and Mathematics</p>
+                    <div class="zh-text"><strong>词汇：</strong><em>bureau</em>（名词）— 政府部门；<em>STEM</em>（名词）— 科学、科技、工程及数学</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== TAB 5: Unit 5: Supplementary Information ==================== -->
+        <div class="tab-content" id="tab5">
+            <div class="card">
+                <h2>Unit 5: Supplementary Information</h2>
+                <div class="zh-label">单元五：补充资料</div>
+            </div>
+
+            <div class="card">
+                <h2>Task 1a — Addressing Concerns &amp; Proposing Solutions</h2>
+                <div class="zh-label">任务 1a — 处理关注事项及提出解决方案</div>
+                <p>When submitting funding applications, it is essential to address potential concerns that reviewers might have. By proactively acknowledging these concerns and presenting clear solutions, we demonstrate thorough evaluation and build confidence in our proposal's success.</p>
+                <div class="zh-text">提交资助申请时，必须处理审查员可能有的潜在关注事项。透过主动承认这些关注事项并提出明确的解决方案，我们展示了全面的评估，并建立对其提案成功的信心。</div>
+
+                <div class="project-section">
+                    <h3>Sample: Supplementary Information</h3>
+                    <p style="border-left:3px solid #2980b9; padding-left:12px; color:#555; font-style:italic;">"We understand that there might be concerns about potential disruptions during the upgrade process. However, we will spare no effort in scheduling system updates during off-peak hours and conducting thorough testing, guaranteeing seamless operations for our clients."</p>
+                    <div class="zh-text" style="border-left:3px solid #2980b9; padding-left:12px;">「我们理解外界可能对升级过程中可能出现的干扰有所顾虑。我们将不遗余力地安排系统更新在非繁忙时段进行，并进行全面测试，确保客户运作不受影响。」</div>
+                </div>
+
+                <div class="project-section">
+                    <h3>Analysis</h3>
+                    <p><strong>What expressions are used to introduce the possible concern and solution?</strong></p>
+                    <ul>
+                        <li>Introducing the possible concern: <em>"We understand that there might be concerns about..."</em></li>
+                        <li>Introducing the solution: <em>"However, we will spare no effort in..."</em></li>
+                    </ul>
+                    <p style="margin-top:8px;"><strong>What effect does the phrase 'there might be concerns about' have on the tone?</strong></p>
+                    <p>This phrase introduces a potential issue in a <span class="answer">tentative and polite</span> manner. The word 'might' implies <span class="answer">uncertainty</span>, presenting the concern as a <span class="answer">possibility</span> rather than a confirmed problem. It <span class="answer">softens</span> the tone, avoiding sounding alarming.</p>
+                    <p style="margin-top:8px;"><strong>What effect does the phrase 'we will spare no effort in...' have on the tone?</strong></p>
+                    <p>This phrase creates a tone of strong <span class="answer">dedication</span> and promise. The words 'will' and 'spare no effort' show firm commitment, making the message sound <span class="answer">confident</span> and <span class="answer">certain</span>, suggesting dedication to achieving the outcome.</p>
+                </div>
+
+                <div class="project-section">
+                    <h3>Language Focus: Modals &amp; Modifiers for Possibility and Certainty</h3>
+                    <dl class="info-grid">
+                        <dt>Expressing Tentativeness (Possibility):</dt>
+                        <dd>
+                            <ul>
+                                <li><strong>Modals:</strong> can, could, may, might</li>
+                                <li><strong>Modifiers:</strong> perhaps, probably, potentially, possibly, maybe, sometimes</li>
+                                <li><strong>Patterns:</strong></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <p style="margin-left:36px; margin-top:-6px;">— We understand/are aware that there might be concerns about...</p>
+                    <p style="margin-left:36px;">— It is likely that certain issues could arise...</p>
+                    <p style="margin-left:36px;">— Possible drawbacks might involve...</p>
+                    <div class="zh-text">表达不确定性（可能性）：我们明白/意识到可能会有……的顾虑；某些问题可能会出现……；可能的缺点可能涉及……</div>
+
+                    <dl class="info-grid" style="margin-top:12px;">
+                        <dt>Conveying Confidence &amp; Commitment (Certainty):</dt>
+                        <dd>
+                            <ul>
+                                <li><strong>Modals:</strong> will</li>
+                                <li><strong>Adverbs:</strong> absolutely, undoubtedly, definitely, certainly, clearly</li>
+                                <li><strong>Patterns:</strong></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <p style="margin-left:36px; margin-top:-6px;">— We will spare no effort in (+ gerund)</p>
+                    <p style="margin-left:36px;">— We are committed to (+ gerund)</p>
+                    <p style="margin-left:36px;">— We will take every measure to ensure that (+ clause)</p>
+                    <p style="margin-left:36px;">— Please rest assured that...</p>
+                    <div class="zh-text">传达信心及承诺（确定性）：我们将不遗余力地……；我们致力于……；我们将采取一切措施确保……；请放心……</div>
+                </div>
+
+                <div class="project-section">
+                    <p><strong>Vocabulary:</strong> <em>assertive</em> (adj.) — expressing opinions strongly and with confidence; <em>reassurance</em> (n.) — something that is said to take away a person's fears or doubts</p>
+                    <div class="zh-text"><strong>词汇：</strong><em>assertive</em>（形容词）— 坚定自信地表达意见；<em>reassurance</em>（名词）— 消除他人恐惧或疑虑的话语</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Task 2 — Ending a Funding Proposal Persuasively</h2>
+                <div class="zh-label">任务 2 — 以具说服力的方式结束资助提案</div>
+                <p>After proposing solutions to potential concerns, you should end your proposal with a persuasive conclusion that reiterates the project's positive impact to leave a lasting impression on reviewers.</p>
+                <div class="zh-text">在提出潜在关注事项的解决方案后，你应以具说服力的结语结束提案，重申项目的正面影响，以给审查员留下深刻印象。</div>
+
+                <div class="project-section">
+                    <h3>Sample Conclusion</h3>
+                    <p style="border-left:3px solid #2980b9; padding-left:12px; color:#555; font-style:italic;">"With the implementation of these robust cybersecurity measures to protect clients' data, we strongly believe that our service quality will be enhanced greatly, contributing to higher industry standards."</p>
+                    <div class="zh-text" style="border-left:3px solid #2980b9; padding-left:12px;">「随着这些强有力的网络安全措施的实施以保护客户数据，我们坚信服务质量将大幅提高，为行业更高标准作出贡献。」</div>
+                </div>
+
+                <div class="project-section">
+                    <h3>Persuasive Concluding Expressions (+ clause)</h3>
+                    <ul>
+                        <li>We have no doubt that ...</li>
+                        <li>We strongly / firmly believe that ...</li>
+                        <li>We are confident / optimistic that ...</li>
+                        <li>We trust that ...</li>
+                        <li>It is believed that ...</li>
+                    </ul>
+                    <div class="zh-text"><strong>具说服力的结语表达（+子句）：</strong>我们毫不怀疑……；我们坚信……；我们有信心……；我们相信……；据信……</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== TAB 6: Revision Package I (IT) ==================== -->
+        <div class="tab-content" id="tab6">
+            <div class="card">
+                <h2>Revision Package I (IT Version)</h2>
+                <div class="zh-label">复习单元一（资讯科技版本）</div>
+                <p style="font-size:0.9em; color:#666; margin-top:6px;">Professional Workplace Communication: Proposal and Report Writing (LAN4103)</p>
+                <div class="zh-text">专业职场沟通：提案及报告写作（LAN4103）</div>
+            </div>
+
+            <div class="card">
+                <h2>Task 1: Complete the Application Form</h2>
+                <div class="zh-label">任务一：完成申请表</div>
+                <p style="font-size:0.93em; color:#555; margin-top:6px;">You are Sarah Wong, an assistant digital media developer at XMedia. Complete the application form using the correct form of the verbs in brackets.</p>
+                <div class="zh-text">你是 XMedia 的助理数码媒体开发员黄丽珊（Sarah Wong）。请使用括号内动词的正确形式完成申请表。</div>
+
+                <table class="form-table" style="margin-top:14px;">
+                    <tr><th colspan="2" style="background:#2980b9; color:white; text-align:center;">Digital Entertainment Association<br>Funding Scheme for Gaming Industry</th></tr>
+                </table>
+
+                <table class="form-table" style="margin-top:10px;">
+                    <tr><th>Name of organisation:</th><td>XMedia</td></tr>
+                    <tr><th>Address:</th><td>Room 1102, Prosperity Tower, 39 Queen's Road, Central</td></tr>
+                    <tr><th>Contact person:</th><td>Wong Lik Shan, Sarah, assistant digital media developer</td></tr>
+                    <tr><th>Office number:</th><td>3456 7890</td></tr>
+                    <tr><th>Email:</th><td>sarahwong@xmedia.com.hk</td></tr>
+                </table>
+
+                <div class="project-section" style="margin-top:16px;">
+                    <p class="section-label">Organisation Information</p>
+                    <div class="zh-label">机构资料</div>
+                    <textarea class="blank-input" rows="3" placeholder="1 ____________________ (launch) in 2019, XMedia 2 ____________________ (be) a game company focusing on designing extended reality (XR) games for gamers. We also 3 ____________________ (offer) a suite of XR solutions which 4 ____________________ (help) corporate clients enhance their training quality and efficiency."></textarea>
+                </div>
+
+                <div class="project-section">
+                    <p class="section-label">Project Aim</p>
+                    <div class="zh-label">项目目标</div>
+                    <textarea class="blank-input" rows="3" placeholder="Considering the growing demand for immersive entertainment, we 5 ____________________ (plan) to develop an XR escape room that 6 ____________________ (introduce) to the public an innovative and interactive application of XR technologies."></textarea>
+                </div>
+
+                <div class="project-section">
+                    <p class="section-label">Project Details</p>
+                    <div class="zh-label">项目详情</div>
+                    <p style="font-size:0.93em; color:#444; margin-bottom:8px;"><strong>a. Implementation</strong></p>
+                    <textarea class="blank-input" rows="5" placeholder="The project will 7 ____________________ (comprise) three phases, each lasting four months. In phase 1, we 8 ____________________ (research) market trends before 9 ____________________ (design) an engaging XR storyline. In phase 2, a suitable venue 10 ____________________ (secure). XR headsets and sensors 11 ____________________ (install) to fit the requirements of the escape room. In the final phase, we 12 ____________________ (launch) a pilot event and 13 ____________________ (collect) user feedback to finalise the escape room's features and accessibility."></textarea>
+                    <p style="font-size:0.93em; color:#444; margin-top:10px; margin-bottom:8px;"><strong>b. Amount of funding requested</strong></p>
+                    <textarea class="blank-input" rows="3" placeholder="A total of $1,200,000 14 ____________________ (expect) for the project. The breakdown of items 15 ____________________ (find) in the attached document."></textarea>
+                </div>
+
+                <div class="project-section">
+                    <p class="section-label">Justification for Funding</p>
+                    <div class="zh-label">资助理由</div>
+                    <textarea class="blank-input" rows="5" placeholder="The XR escape room 16 ____________________ (offer) the public a unique and interactive way to experience cutting-edge technology, which will broaden interest in XR entertainment. In addition, participants 17 ____________________ (develop) problem-solving skills in a fun environment, 18 ____________________ (add) educational value to the experience. Furthermore, this project's aim 19 ____________________ (align) with the mission and values of the Digital Entertainment Association, and it 20 ____________________ (contribute) to the advancement of Hong Kong's digital entertainment sector."></textarea>
+                </div>
+
+                <div class="project-section">
+                    <p class="section-label">Supplementary Information</p>
+                    <div class="zh-label">补充资料</div>
+                    <textarea class="blank-input" rows="3" placeholder="We are aware that there 21 ____________________ (be) concerns about the reliability of XR equipment. However, we 22 ____________________ (partner) with reputable suppliers and conduct regular maintenance checks to ensure a stable and enjoyable experience for all users."></textarea>
+                    <textarea class="blank-input" rows="3" placeholder="With the launch of this XR escape room to provide the public with an innovative entertainment option, it 23 ____________________ (hope) that public understanding of XR technology 24 ____________________ (enhance), driving growth in the digital entertainment industry."></textarea>
+                </div>
+
+                <div class="footer" style="margin-top:14px;">
+                    <span><strong>Submission date:</strong> 23 Aug 202-</span>
+                    <span><strong>Signature:</strong> Sarah Wong</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Task 2: Complete the Funding Proposal Application</h2>
+                <div class="zh-label">任务二：完成资助提案申请</div>
+                <p style="font-size:0.93em; color:#555; margin-top:6px;">You are Alex Lee, an assistant stage designer at Dream Art Centre. Complete the funding proposal application in 250–300 words.</p>
+                <div class="zh-text">你是 Dream Art Centre 的助理舞台设计师李志翰（Alex Lee）。请在250–300字内完成资助提案申请。</div>
+
+                <div class="card" style="background:#f8f9fa; border-left:4px solid #2980b9; margin-top:12px;">
+                    <h2>Email from Simon Yeung</h2>
+                    <div class="zh-label">来自 Simon Yeung 的电邮</div>
+                    <table class="form-table" style="margin-top:10px;">
+                        <tr><th style="width:140px;">Subject:</th><td>Seeking Funding for Theatre Lighting and Sound Systems Upgrade</td></tr>
+                        <tr><th>From:</th><td>[SY] Simon Yeung</td></tr>
+                        <tr><th>To:</th><td>Alex Lee</td></tr>
+                        <tr><th>Date:</th><td>12 Dec 202- Mon 10:42</td></tr>
+                    </table>
+                    <div style="background:#fff; border-radius:6px; padding:14px 18px; margin-top:12px; font-size:0.93em; line-height:1.7;">
+                        <p>Dear Alex,</p>
+                        <p style="margin-top:8px;">As discussed in the monthly meeting, we are planning to upgrade our theatre's lighting and sound systems aimed at enhancing the immersive experience for both performers and audiences.</p>
+                        <p style="margin-top:8px;">With an estimated cost of around HK$1,500,000, we would like to apply for the funding scheme offered by the Innovation and Technology Commission, which aims to foster the adoption of advanced arts technology in Hong Kong. Could you please help complete the funding proposal application form for my comments by next Wednesday?</p>
+                        <p style="margin-top:8px;">Thank you for your help.</p>
+                        <p style="margin-top:8px;">Regards,<br>Simon</p>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top:12px;">
+                    <h2>Application Form</h2>
+                    <div class="zh-label">申请表</div>
+                    <table class="form-table" style="margin-top:10px;">
+                        <tr><th colspan="2" style="background:#2980b9; color:white; text-align:center;">Innovation and Technology Commission<br>Funding Scheme for Arts Technology</th></tr>
+                    </table>
+                    <table class="form-table" style="margin-top:10px;">
+                        <tr><th>Name of organisation:</th><td>Dream Art Centre</td></tr>
+                        <tr><th>Address:</th><td>15/F Causeway Bay Plaza 2, 28 Yee Wo Street, Causeway Bay</td></tr>
+                        <tr><th>Contact person:</th><td>Lee Tsz Hon, Alex, assistant stage designer</td></tr>
+                        <tr><th>Office number:</th><td>2468 1357</td></tr>
+                        <tr><th>Email:</th><td>alexlee@dreamart.org.hk</td></tr>
+                    </table>
+                </div>
+
+                <div class="card" style="margin-top:12px;">
+                    <div class="project-section">
+                        <p class="section-label">Organisation Information</p>
+                        <div class="zh-label">机构资料</div>
+                        <textarea class="blank-input" rows="4" placeholder="[Describe organisation details]"></textarea>
+                    </div>
+                    <div class="project-section">
+                        <p class="section-label">Project Aim</p>
+                        <div class="zh-label">项目目标</div>
+                        <p style="font-size:0.93em; color:#444;">In light of the increasing integration of technology in the arts, we are planning to upgrade our theatre's lighting and sound systems aimed at enhancing the immersive experience for both performers and audiences.</p>
+                    </div>
+                    <div class="project-section">
+                        <p class="section-label">Project Details</p>
+                        <div class="zh-label">项目详情</div>
+                        <p style="font-size:0.93em; color:#444; margin-bottom:8px;"><strong>a. Implementation</strong></p>
+                        <textarea class="blank-input" rows="5" placeholder="[Narrate project implementation]"></textarea>
+                        <p style="font-size:0.93em; color:#444; margin-top:10px; margin-bottom:8px;"><strong>b. Amount of funding requested</strong></p>
+                        <textarea class="blank-input" rows="3" placeholder="[Request funding amount]"></textarea>
+                    </div>
+                    <div class="project-section">
+                        <p class="section-label">Justification for Funding</p>
+                        <div class="zh-label">资助理由</div>
+                        <textarea class="blank-input" rows="5" placeholder="[Highlight benefits, describe desired results, align with funding body's mission]"></textarea>
+                    </div>
+                    <div class="project-section">
+                        <p class="section-label">Supplementary Information</p>
+                        <div class="zh-label">补充资料</div>
+                        <textarea class="blank-input" rows="5" placeholder="[Describe potential concern and propose solution; end the application persuasively]"></textarea>
+                    </div>
+                </div>
+
+                <div class="footer" style="margin-top:14px;">
+                    <span><strong>Submission date:</strong> 16 Dec 202-</span>
+                    <span><strong>Signature:</strong> Alex Lee</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== TAB 7: CA Assessment Overview ==================== -->
+        <div class="tab-content" id="tab7">
+            <div class="card">
+                <h2>CA Assessment Overview</h2>
+                <div class="zh-label">持续评估概览</div>
+            </div>
+
+            <div class="card">
+                <h2>Assessment Details</h2>
+                <div class="zh-label">评估详情</div>
+                <dl class="info-grid">
+                    <dt>Module:</dt><dd>LAN4103 Professional Workplace Communication: Proposal &amp; Report Writing.</dd>
+                    <dt>Assessment Type:</dt><dd>Continuous Assessment (25%) – Funding Proposal.</dd>
+                    <dt>Writing Task:</dt><dd>Complete one funding proposal application.</dd>
+                    <dt>Duration:</dt><dd>1 hour only.</dd>
+                    <dt>Word Count:</dt><dd>250–300 words.</dd>
+                    <dt>Task Objective:</dt><dd>Respond appropriately to a workplace funding scenario.</dd>
+                </dl>
+                <div class="zh-text">
+                    <dl class="info-grid">
+                        <dt>科目：</dt><dd>LAN4103 专业职场沟通：提案及报告写作</dd>
+                        <dt>评估类型：</dt><dd>持续评估（25%）– 资助提案</dd>
+                        <dt>写作任务：</dt><dd>完成一份资助提案申请。</dd>
+                        <dt>时长：</dt><dd>仅1小时。</dd>
+                        <dt>字数：</dt><dd>250–300字。</dd>
+                        <dt>任务目标：</dt><dd>适当地回应职场资助情景。</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Key Skills &amp; Assessment Criteria</h2>
+                <div class="zh-label">关键技能与评估标准</div>
+
+                <div class="project-section">
+                    <h3>Key Skills</h3>
+                    <p>Describe, synthesise, organise, explain, persuade and evaluate.</p>
+                    <div class="zh-text">描述、综合、组织、解释、说服及评估。</div>
+                </div>
+
+                <div class="project-section">
+                    <h3>Assessment Criteria</h3>
+                    <p>Task response, organisation, style &amp; register, cohesion, vocabulary and grammar.</p>
+                    <div class="zh-text">任务回应、组织、风格与语域、衔接、词汇及语法。</div>
+                </div>
+
+                <div class="project-section">
+                    <h3>Information Sources</h3>
+                    <p>Emails, website extracts, meeting notes and handwritten notes.</p>
+                    <div class="zh-text">电邮、网站摘录、会议记录及手写笔记。</div>
+                </div>
+
+                <div class="project-section">
+                    <h3>Assessment Rules</h3>
+                    <p>Follow attendance procedures and device regulations.</p>
+                    <div class="zh-text">请遵守出席程序及设备规例。</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== TAB 8: Supplementary Notes for CA ==================== -->
+        <div class="tab-content" id="tab8">
+            <div class="card">
                 <h2>Follow the 4 Steps to Write Your 25% CA</h2>
-                <div class="zh-label" id="t3zhTitle">按照以下四个步骤撰写25%持续评估</div>
+                <div class="zh-label" id="t3zhTitle2">按照以下四个步骤撰写25%持续评估</div>
             </div>
 
             <div class="card">
                 <h2>Step 1: Writing Organisation Information (Unit 2)</h2>
-                <div class="zh-label" id="t3zhS1">第一步：撰写机构资料（单元二）</div>
+                <div class="zh-label" id="t3zhS1b">第一步：撰写机构资料（单元二）</div>
                 <p>For writing Organisation information, identify key components on the homepage and use the following grammatical structures:</p>
-                <div class="zh-text" id="t3zhS1a">撰写机构资料时，请从主页中识别关键信息，并运用以下语法结构：</div>
+                <div class="zh-text" id="t3zhS1b2">撰写机构资料时，请从主页中识别关键信息，并运用以下语法结构：</div>
                 <ul>
                     <li><strong>Structure 1:</strong> [past participle, "-ed"] + in + Establishment/Founding/Formation year</li>
                 </ul>
@@ -813,101 +1000,6 @@
             </div>
         </div>
 
-        <!-- ==================== TAB 6: Unit 5: Justification & Supplementary Info ==================== -->
-        <div class="tab-content" id="tab5">
-            <div class="card">
-                <h2>LAN4103 — Unit 5: Supplementary Information & Justification for Funding</h2>
-                <div class="zh-label">LAN4103 — 单元五：补充资料及资助理由</div>
-            </div>
-
-            <div class="card">
-                <h2>Task 1b — Concerns & Solutions with Present Participle Clauses</h2>
-                <div class="zh-label">任务 1b — 使用现在分词子句描述关注事项及解决方案</div>
-                <p>Read some details of three projects below. Describe the potential concerns and propose relevant solutions, and express the desired results using present participle clauses.</p>
-                <div class="zh-text">请阅读以下三个项目的详情，描述潜在的关注事项并提出相应的解决方案，并使用现在分词子句表达预期成果。</div>
-
-                <div class="project-section">
-                    <h3>1. Drone-assisted Delivery Project</h3>
-                    <dl class="info-grid">
-                        <dt>Potential concern:</dt><dd>Navigation system malfunction</dd>
-                        <dt>Solution:</dt><dd>Regular maintenance checks → drones' optimal performance</dd>
-                    </dl>
-                    <p style="margin-top:8px;"><em>____________________ potential malfunction of the drones' navigation system, ____________________ regular maintenance checks, ____________________ the drones' optimal performance.</em></p>
-                    <div class="zh-text">无人机导航系统可能出现故障，定期进行维护检查，确保无人机的最佳性能。</div>
-                </div>
-
-                <div class="project-section">
-                    <h3>2. Facelock Smart Lockers Project</h3>
-                    <dl class="info-grid">
-                        <dt>Potential concern:</dt><dd>Privacy issues regarding facial recognition</dd>
-                        <dt>Solution:</dt><dd>Encrypted system for protection of biometric data → user trust &amp; data security fostered</dd>
-                    </dl>
-                    <p style="margin-top:8px;"><em>____________________ the privacy issues regarding facial recognition in smart lockers, ____________________ an encrypted system to protect sensitive biometric information, ____________________ user trust and data security.</em></p>
-                    <div class="zh-text">智能储物柜人脸识别功能的私隐问题，建立加密系统以保护敏感的生物辨识资讯，促进用户信任及数据安全。</div>
-                </div>
-
-                <div class="project-section">
-                    <h3>3. Emergency Video Call App</h3>
-                    <dl class="info-grid">
-                        <dt>Potential concern:</dt><dd>Poor connectivity in remote areas</dd>
-                        <dt>Solution:</dt><dd>Low-bandwidth mode → reliable visual communication during emergencies</dd>
-                    </dl>
-                    <p style="margin-top:8px;"><em>We are aware that certain issues such as __________________________________________________. To address this problem, __________________________________________________.</em></p>
-                    <div class="zh-text">我们明白可能出现的问题……。为解决此问题，……。</div>
-                </div>
-
-                <div class="project-section">
-                    <p><strong>Vocabulary:</strong> <em>bureau</em> (noun) — a government department</p>
-                    <div class="zh-text"><strong>词汇：</strong><em>bureau</em>（名词）— 政府部门</div>
-                </div>
-            </div>
-
-            <div class="card">
-                <h2>Task 2b — Concluding Remarks for Funding Justification</h2>
-                <div class="zh-label">任务 2b — 资助理由的结语</div>
-                <p>Read the aims of three projects and discuss with your classmates the impact each project will bring. Remember to highlight outcomes that resonate with the aims of the funding body. Then, write the concluding remark.</p>
-                <div class="zh-text">请阅读三个项目的目标，与同学讨论每个项目将带来的影响。切记强调与资助方目标一致的成果，然后撰写结语。</div>
-
-                <div class="project-section">
-                    <h3>1. Smart Traffic Lights Mong Kok</h3>
-                    <dl class="info-grid">
-                        <dt>Project aim:</dt><dd>To optimise traffic movement in Mong Kok</dd>
-                        <dt>Funding body:</dt><dd>Innovation, Technology and Industry Bureau</dd>
-                        <dt>Impact:</dt><dd>Reduced traffic congestion</dd>
-                    </dl>
-                    <p style="margin-top:8px;"><em>With the launch of the smart traffic lights aiming to ____________________, we strongly believe that ____________________, improving ____________________.</em></p>
-                    <div class="zh-text">随着智能交通灯的推出，旨在……，我们坚信……，改善……。</div>
-                </div>
-
-                <div class="project-section">
-                    <h3>2. Airport Patrol Robots</h3>
-                    <dl class="info-grid">
-                        <dt>Project aim:</dt><dd>Enhance airport security by introducing patrol robots</dd>
-                        <dt>Funding body:</dt><dd>Your company management</dd>
-                        <dt>Impact:</dt><dd>Provide real-time surveillance &amp; alerts</dd>
-                    </dl>
-                    <p style="margin-top:8px;"><em>We are confident that airport patrol robots can __________________________________________________.</em></p>
-                    <div class="zh-text">我们坚信机场巡逻机器人能够……。</div>
-                </div>
-
-                <div class="project-section">
-                    <h3>3. STEM Talents Programme</h3>
-                    <dl class="info-grid">
-                        <dt>Project aim:</dt><dd>To nurture young people's passion for STEM</dd>
-                        <dt>Funding body:</dt><dd>The Hong Kong Jockey Club Charities Trust</dd>
-                        <dt>Impact:</dt><dd>Practical skills and confidence in STEM → developing IT-based solutions to solve real-life problems</dd>
-                    </dl>
-                    <p style="margin-top:8px;"><em>By launching __________________________________________________________________________________________.</em></p>
-                    <div class="zh-text">透过推出……。</div>
-                </div>
-
-                <div class="project-section">
-                    <p><strong>Vocabulary:</strong> <em>STEM</em> (noun) — stands for Science, Technology, Engineering, and Mathematics (as subjects of study)</p>
-                    <div class="zh-text"><strong>词汇：</strong><em>STEM</em>（名词）— 代表科学、科技、工程及数学（作为学习科目）</div>
-                </div>
-            </div>
-        </div>
-
     <script>
         let showZh = true;
         function toggleLang() {
@@ -918,6 +1010,16 @@
             document.querySelectorAll('.tab-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
             document.querySelectorAll('.tab-content').forEach((c, i) => c.classList.toggle('active', i === idx));
         }
+        function autoResize(el) {
+            el.style.height = 'auto';
+            el.style.height = el.scrollHeight + 'px';
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('textarea.blank-input').forEach(function(ta) {
+                ta.addEventListener('input', function() { autoResize(this); });
+                autoResize(ta);
+            });
+        });
     </script>
 </body>
 </html>
